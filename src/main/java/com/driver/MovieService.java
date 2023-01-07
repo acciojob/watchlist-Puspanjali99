@@ -46,9 +46,9 @@ public class MovieService {
         return "The parameters doesn't exist in Database";
     }
 
-    public String getDirectorByMovieName(Movie){
+    public String getDirectorByMovieName(String Movie){
         if(movieRepository.directorMap.containsKey(Movie)){
-           return movieRepository.directorMap.get(Movie);
+         //  return movieRepository.directorMap.get(Movie);
         }
         return null;
     }

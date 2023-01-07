@@ -48,7 +48,7 @@ public class MovieController {
     }
     @GetMapping("/movies/get_director_by_movie_name")
     public String getDirectorbyMovieName(@RequestParam("movieName")String movieName){
-        String movie = movieService.getDirectorByMovieName(String movieName);
+        String movie = movieService.getDirectorByMovieName( movieName);
         return movie;
     }
     @GetMapping("/movies/get-movies-by-director-name")
