@@ -35,6 +35,7 @@ public class MovieService {
                 movieList.add(movieName);
                 movieRepository.dirMovPair.put(directorName,movieList);
             }
+
             else{
                 List<String> movieList = movieRepository.dirMovPair.get(directorName);
                 movieList.add(movieName);
@@ -44,6 +45,14 @@ public class MovieService {
         }
         return "The parameters doesn't exist in Database";
     }
+
+    public String getDirectorByMovieName(Movie){
+        if(movieRepository.directorMap.containsKey(Movie)){
+           return movieRepository.directorMap.get(Movie);
+        }
+        return null;
+    }
+
 
     public Movie getMovieByName(String movieName){
 

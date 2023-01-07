@@ -14,4 +14,7 @@ public class MovieRepository {
     Map<String,Director> directorDB = new HashMap<>();
     Map<String, List<String>> dirMovPair = new HashMap<>();
 
+    Map<String,Director> directorMap = new HashMap<>();
+
 }
+
